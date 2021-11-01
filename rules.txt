@@ -1,5 +1,0 @@
---------------------------------------------------------------------------------------------------
-                                  TETRIS FROM DANICBRO12
---------------------------------------------------------------------------------------------------
-To play Tetris, you need to open the index.html file.
-Hotkeys for playing Tetris (W = rotate: S = quickly drag a shape: space = largest button
