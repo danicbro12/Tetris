@@ -208,9 +208,9 @@ def draw_grid(surface, row, col):
     sx = top_left_x
     sy = top_left_y
     for i in range(row):
-        pygame.draw.line(surface, (128,128,128), (sx, sy+ i*30), (sx + play_width, sy + i * 30))  # horizontal lines
+        pygame.draw.line(surface, (32, 32, 32), (sx, sy+ i*30), (sx + play_width, sy + i * 30))  # horizontal lines
         for j in range(col):
-            pygame.draw.line(surface, (128,128,128), (sx + j * 30, sy), (sx + j * 30, sy + play_height))  # vertical lines
+            pygame.draw.line(surface, (32, 32, 32), (sx + j * 30, sy), (sx + j * 30, sy + play_height))  # vertical lines
 
 
 def clear_rows(grid, locked):
@@ -252,9 +252,15 @@ def draw_next_shape(shape, surface):
 
     surface.blit(label, (sx + 10, sy- 30))
 
+    label = font.render('Made By Dayr2003', 1, (255,255,255))
+
+    sx = top_left_x + play_width + 50
+    sy = top_left_y + play_height - 15
+    surface.blit(label, (sx + 15, sy- 10))
+
 
 def draw_window(surface):
-    surface.fill((0,0,0))
+    surface.fill((32, 32, 32))
     # Tetris Title
     font = pygame.font.SysFont('Open Sans', 60)
     label = font.render('TETRIS', 1, (255,255,255))
@@ -267,7 +273,7 @@ def draw_window(surface):
 
     # draw grid and border
     draw_grid(surface, 20, 10)
-    pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5)
+    pygame.draw.rect(surface, (225, 225, 225), (top_left_x, top_left_y, play_width, play_height), 5)
     # pygame.display.update()
 
 
